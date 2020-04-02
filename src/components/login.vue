@@ -16,7 +16,7 @@
     </div>
   </div>
 </template>
-import {Loading} from 'element-ui'
+
 <script>
   export default {
     name: "login",
@@ -37,8 +37,8 @@ import {Loading} from 'element-ui'
 
       UserLogin() {
         console.log("login...");
-        this.$http.interceptors.request.eject(this.$store.state.$responseInterceptor); //取消拦截器
-        this.$http.interceptors.response.eject(this.$store.state.$responseInterceptor); //取消拦截器
+        // this.$http.interceptors.request.eject(this.$store.state.$responseInterceptor); //取消拦截器
+        // this.$http.interceptors.response.eject(this.$store.state.$responseInterceptor); //取消拦截器
         if (this.usernameModel === "") {
           this.$message.error({message: '请输入账号！', duration: 700});
           return false;

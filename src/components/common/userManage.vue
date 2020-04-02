@@ -141,7 +141,7 @@
     mounted() {
     },
     created() {
-      this.GetUser();
+      // this.GetUser();
     },
     methods: {
       // 打开修改用户

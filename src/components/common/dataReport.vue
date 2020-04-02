@@ -651,7 +651,7 @@
 
     },
     created() {
-      this.GetReport();
+      // this.GetReport();
     },
     methods: {
       // 切换class
