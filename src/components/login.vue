@@ -47,9 +47,9 @@
           return false;
         }
         else {
-          sessionStorage.setItem("name", result["username"]);
-          sessionStorage.setItem("user_id", result["id"]);
-          sessionStorage.setItem("user_type",result["user_type"]);
+          sessionStorage.setItem("name", "admin");
+          sessionStorage.setItem("user_id", "1");
+          sessionStorage.setItem("user_type","1");
           this.$router.push({name:"HomePage"});//跳转到index页面
           // this.loading = true;
           // let data = {
