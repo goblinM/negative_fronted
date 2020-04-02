@@ -1,6 +1,5 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import VueRouter from "vue-router";
 import login from '@/components/login'
 import HomePage from '@/components/common/HomePage'
 import hotDaily from '@/components/common/hotDaily'
@@ -9,14 +8,11 @@ import spiderManage from '@/components/common/spiderManage'
 import userManage from '@/components/common/userManage'
 import dataReport from '@/components/common/dataReport'
 import dataAnalysis from '@/components/common/dataAnalysis'
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
-  mode: "history",//去掉#
-  base:'/',
-  routes: [
+const routes= [
      {
-      path: '', redirect: '/login'
+      path: '*', redirect: '/login'
     },
     {
       path:'/login',
@@ -65,6 +61,10 @@ export default new Router({
       name:'dataReport',
       component:dataReport
     }
-
   ]
-})
+
+const router = new VueRouter({
+  routes
+});
+
+export default router;
